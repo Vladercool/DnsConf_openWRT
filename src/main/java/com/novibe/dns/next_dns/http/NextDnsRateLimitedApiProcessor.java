@@ -40,7 +40,7 @@ public class NextDnsRateLimitedApiProcessor {
                     requestQueue.add(requestDto);
                     Log.common("Sending speed: %s requests per second"
                             .formatted((double) waveCounter / 60));
-                    Log.progress("Code %s. Api rate limit has reached. Waiting for reset: %s seconds"
+                    Log.common("Code %s. Api rate limit has reached. Waiting for reset: %s seconds"
                             .formatted(e.getCode(), waitSeconds));
                     runWaitTimer(waitSeconds);
                     Log.common("Continue...");
